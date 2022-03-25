@@ -5,7 +5,7 @@ if(${ARM_BUILD} STREQUAL "ON")
     set(CMAKE_SYSTEM_PROCESSOR arm)
     set(CMAKE_C_COMPILER ${TOOLCHAIN}/aarch64-linux-gnu-gcc)
     set(CMAKE_CXX_COMPILER ${TOOLCHAIN}/aarch64-linux-gnu-g++)
-    set(CMAKE_INSTALL_RPATH ${CMAKE_INSTALL_PREFIX}/a)
+    set(CMAKE_INSTALL_RPATH ${CMAKE_INSTALL_PREFIX}/lib)
 endif()
 
 
