@@ -13,7 +13,6 @@ project(SimpleLibrary)
 include_directories(include)
 
 
-set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${SimpleLibrary_SOURCE_DIR}/lib)
 add_subdirectory(src)
 add_executable(Main main.cpp)
 add_executable(MainLib main_lib.cpp)
