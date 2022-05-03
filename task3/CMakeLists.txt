@@ -8,16 +8,12 @@ if(${ARM_BUILD} STREQUAL "ON")
     set(CMAKE_INSTALL_RPATH ${CMAKE_INSTALL_PREFIX}/lib)
 endif()
 
-
 project(SimpleLibrary)
-include_directories(include)
-
 
 add_subdirectory(src)
 add_executable(Main main.cpp)
 add_executable(MainLib main_lib.cpp)
-
-target_link_libraries(MainLib buffer)
+target_link_libraries(MainLib PUBLIC buffer)
 install(TARGETS Main MainLib  DESTINATION bin)
 install(TARGETS buffer DESTINATION lib)
 install(FILES include/buffer.h DESTINATION include)
