@@ -1,3 +1,3 @@
 #pragma once
-#include "index.h"
-#include "lib.h"
+#include "A/index.h"
+#include "B/lib.h"

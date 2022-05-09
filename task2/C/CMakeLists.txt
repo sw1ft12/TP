@@ -5,9 +5,7 @@ set_target_properties(C PROPERTIES CXX_STANDARD 17 CXX_STANDARD_REQUIRED ON)
 set_target_properties(C mylib PROPERTIES
                         LIBRARY_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/../lib
                         RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/../bin)
-target_include_directories(C PUBLIC
-                         ${CMAKE_CURRENT_SOURCE_DIR}/../B
-                         ${CMAKE_CURRENT_SOURCE_DIR}/../A)
+target_include_directories(C PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/../)
 target_link_libraries(C mylib)
 target_link_libraries(C index)
 
