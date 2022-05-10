@@ -21,6 +21,6 @@ if [ ! -e "$backup_folder" ]
 then
 mkdir "$backup_folder"
 fi
-find "$input_folder" -type f -name "*.$extension" -exec cp -v "$backup_folder" \;
+find "$input_folder" -type f -name "*.$extension" -exec cp --backup=numbered "{}" "$backup_folder" \;
 tar -czf "$backup_archive_name" "$backup_folder"
 echo "done"
