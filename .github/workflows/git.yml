@@ -3,11 +3,13 @@ on:
     push:
         branches: [ task6 ]
     pull_request:
-        branches: [ main ]
+        branches: [ master ]
 
 jobs:
     build:
+
     runs-on: ubuntu-latest
+
     steps:
         - uses: actions/checkout@v3
         - name: Build
