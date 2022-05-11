@@ -13,7 +13,8 @@ project(SimpleLibrary)
 add_subdirectory(src)
 add_executable(Main main.cpp)
 add_executable(MainLib main_lib.cpp)
-target_link_libraries(MainLib PUBLIC buffer)
-install(TARGETS Main MainLib  DESTINATION bin)
-install(TARGETS buffer DESTINATION lib)
-install(FILES include/buffer.h DESTINATION include)
+target_link_libraries(MainLib PRIVATE buffer)
+install(TARGETS Main MainLib buffer buffer.h 
+       RUNTIME DESTINATION bin
+       LIBRARY DESTINATION lib
+       INCLUDES DESTINATION include)
