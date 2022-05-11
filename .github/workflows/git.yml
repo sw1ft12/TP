@@ -3,7 +3,7 @@ on:
     push:
         branches: [ task6 ]
     pull_request:
-        branches: [ main ]
+        branches: [ master ]
 
 jobs:
     build:
