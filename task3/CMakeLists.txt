@@ -14,7 +14,8 @@ add_subdirectory(src)
 add_executable(Main main.cpp)
 add_executable(MainLib main_lib.cpp)
 target_link_libraries(MainLib PRIVATE buffer)
-install(TARGETS Main MainLib buffer buffer.h 
+install(TARGETS Main MainLib buffer 
        RUNTIME DESTINATION bin
        LIBRARY DESTINATION lib
        INCLUDES DESTINATION include)
+install(FILES include/buffer.h DESTINATION include)
